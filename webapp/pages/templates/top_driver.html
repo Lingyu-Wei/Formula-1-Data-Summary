@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static', filename='chartist.min.css')}}">
+    <script type="text/javascript" src="{{ url_for('static', filename='webapp.js') }}"></script>
+</head>
+<style>
+    .ct-label {
+        color: white;
+        font-size: medium;
+        orientation: auto;
+    }
+    
+    .ct-series-a .ct-bar {
+        stroke: red;
+        stroke-width: 20px;
+    }
+</style>
+
+<body>
+    <h1>
+        <a id="title" href="index.html">Formula 1</a>
+        <span class="smaller">Data Summary</span>
+    </h1>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+
+        <a href="top_driver.html">Driver</a>
+
+        <div class="dropdown">
+            <button class="dropbtn">Race</button>
+            <div class="dropdown-content">
+                <a href="20century.html">20th century</a>
+                <a href="21century.html">21st century</a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <h2>Top Drivers in the World</h2>
+    <div class="sort">
+        <select id="top">
+            <option value="10">Top 10</option>
+            <option value="20">Top 20</option>
+        </select>
+    </div>
+    <div class="topdriver-chart-container">
+        <div class="ct-chart ct-perfect-fourth" id="topdriver-bar-chart"></div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='chartist.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='topdriver.js') }}"></script>
+
+
+</body>
+
+</html>

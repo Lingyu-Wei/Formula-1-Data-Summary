@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}" />
+    <script type="text/javascript" src="{{ url_for('static', filename='webapp.js') }}"></script>
+    <title>Formula 1 Data Summary Home</title>
+</head>
+
+<body>
+    <h1>
+        <a id="title" href="index.html">Formula 1</a>
+        <span class="smaller">Data Summary</span>
+    </h1>
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="top_driver.html">Driver</a>
+
+        <div class="dropdown">
+            <button class="dropbtn">Race</button>
+            <div class="dropdown-content">
+                <a href="20century.html">20th century</a>
+                <a href="21century.html">21st century</a>
+            </div>
+        </div>
+
+    </div>
+
+    <h2>Races in 21st Century</h2>
+
+    <h3>Click on the race name to get more information!</h3>
+
+    <div class="table_container">
+        <table class="twentyfirst_race_table" id="21centuryRace">
+        </table>
+    </div>
+
+    <br>
+    <br>
+
+
+
+</body>
+
+</html>
